@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defines a Class Rectangle."""
 
+
 class Rectangle:
     """Represents a Rectangle."""
 
@@ -24,7 +25,7 @@ class Rectangle:
         """Set the width of the Rectangle."""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        if value < 0:
+        if value < 0:   
             raise ValueError("width must be >= 0")
         self.__width = value
 
