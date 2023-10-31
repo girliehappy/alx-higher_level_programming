@@ -7,7 +7,7 @@ class Rectangle:
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
-         """Initialize a new Rectangle.
+        """Initialize a new Rectangle.
 
         Args:
             width (int): The width of the new Rectangle.
@@ -66,7 +66,7 @@ class Rectangle:
         rectangle_str = ""
         for _ in range(self.height):
             rectangle_str += "#" * self.width + "\n"
-        return rectangle_str[:-1] """This line removes trailing newline."""
+        return rectangle_str[:-1]
 
     def __repr__(self):
         """Returns a string representation of the rectangle."""
