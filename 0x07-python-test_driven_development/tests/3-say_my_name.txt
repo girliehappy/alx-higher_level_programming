@@ -1,0 +1,27 @@
+The ''say_my_name'' module
+==========================
+
+Using ''say_my_name''
+---------------------
+
+Import function from module:
+
+	>>>say_my_name = __import__('3-say_my_name').say_my_name
+
+Test cases for valid inputs:
+
+	>>> say_my_name("John", "Smith")
+	My name is John Smith
+
+	>>> say_my_name("Walter", "White")
+	My name is Walter White
+
+	>>> say_my_name("Bob")
+	My name is Bob
+
+Test cases for invalid inputs:
+	>>> say_my_name(12, "White")
+	Traceback (most recent call last):
+    	...
+	TypeError: first_name must be a string
+
