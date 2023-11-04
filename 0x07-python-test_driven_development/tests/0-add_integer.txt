@@ -1,0 +1,48 @@
+"""Test cases for the add_integer function."""
+
+# Import the add_integer function from your main file
+add_integer = __import__('0-add_integer').add_integer
+
+# Test cases for valid inputs
+>>> add_integer(1, 2)
+3
+
+>>> add_integer(100, -2)
+98
+
+>>> add_integer(2)
+100
+
+>>> add_integer(100.3, -2)
+98
+
+# Test cases for invalid inputs
+>>> add_integer(4, "School")
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer or b must be an integer
+
+>>> add_integer(None)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer or b must be an integer
+
+# Test cases with float inputs
+>>> add_integer(3.5, 2.5)
+5
+
+>>> add_integer(7.7, 7.7)
+14
+
+# Test edge cases
+>>> add_integer(0, 0)
+0
+
+>>> add_integer(-1, -1)
+-2
+
+>>> add_integer(0, 98)
+98
+
+>>> add_integer(98, 0)
+98
