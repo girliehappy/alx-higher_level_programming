@@ -1,0 +1,71 @@
+The ''1-my_list'' module
+=======================
+
+Using ''my_list''
+-----------------
+
+Import function from module:
+
+	>>>MyList = __import__('1-my_list').my_list
+
+Test 1: Create an empty MyList and check its length:
+
+	>>> my_list = MyList()
+	>>> len(my_list)
+	0
+
+Test 2: Append elements to the MyList and check its length:
+
+	>>> my_list.append(1)
+	>>> len(my_list)
+	1
+	
+	>>> my_list.append(4)
+	>>> len(my_list)
+	2
+
+Test 3: Append multiple elements and check their order:
+
+	>>> my_list.append(2)
+	>>> my_list.append(3)
+	>>> my_list.append(5)
+	>>> my_list
+	[1, 4, 2, 3, 5]
+
+Test 4: Check the sorted representation of the MyList:
+
+	>>> my_list.print_sorted()
+	1 2 3 4 5
+
+Test 5: Append a negative number and check the sorted representation:
+
+	>>> my_list.append(-1)
+	>>> my_list.print_sorted()
+	-1 1 2 3 4 5
+
+Test 6: Append a string, it should raise an error:
+
+	>>> my_list.append("hello")
+	Traceback (most recent call last):
+   		...
+	TypeError: MyList only supports integer elements
+
+Test 7: Check the sorted representation again after the error:
+
+	>>> my_list.print_sorted()
+	-1 1 2 3 4 5
+
+Test 8: Test the behavior of an empty MyList:
+	>>> empty_list = MyList()
+	>>> empty_list.print_sorted()
+
+Test 9: Test the behavior of an empty MyList after appending elements:
+	>>> empty_list.append(0)
+	>>> empty_list.append(7)
+	>>> empty_list.append(5)
+	>>> empty_list.print_sorted()
+	0 5 7
+
+Test 10: Check if sorted still works after appending to the empty list:
+	>>> empty_list.print_sorted()
+	0 5 7
