@@ -13,6 +13,7 @@ class Student:
             last_name (string): The last name of the student.
             age (integer): The age of the student.
         """
+        
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
@@ -25,6 +26,7 @@ class Student:
         Args:
             attrs (list): The attributes to represent.
         """
+        
         if (type(attrs) == list and
                 all(type(ele) == str for ele in attrs)):
             return {h: getattr(self, h) for h in attrs if hasattr(self, h)}
