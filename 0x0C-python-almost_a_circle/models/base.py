@@ -134,7 +134,7 @@ class Base:
                 pen.left(90)
 
         """Draw Squares."""
-        pen.color("red")  """Change the color for squares."""
+        pen.color("red")
 
         for square in list_squares:
             pen.penup()
