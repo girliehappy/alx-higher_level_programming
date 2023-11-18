@@ -87,15 +87,22 @@ class Rectangle(Base):
         """Return the id of Rectangle."""
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
 
-    def update(self, *args):
-        """Assign an argument to five diff attributes."""
-        if len(args) >= 1:
-            self.id = args[0]
-        if len(args) >= 2:
-            self.width = args[1]
-        if len(args) >= 3:
-            self.height = args[2]
-        if len(args) >= 4:
-            self.x = args[3]
-        if len(args) >= 5:
-            self.y = args[4]
+    def update(self, *args, **kwargs):
+        """Assign value argument to attributes according to their position."""
+        if args:
+            attrs = ["id", "width", "height", "x", "y"]
+            for t, value in enumerate(args[:len(attrs)]):
+                setattr(self, attrs[t], value)
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Return the dictionary representation of a Rectangle."""
+        return {
+            'x': self.x,
+            'y': self.y,
+            'id': self.id,
+            'height': self.height,
+            'width': self.width
+        }
